@@ -54,6 +54,7 @@ public class ProductoOtaku {
 		this.stock = stock;
 	}
 	
+	@Override
 	public String toString() {
 		return "ID: " + id + " | Nombre: " + nombre + " | Categoria: " + categoria + " | Precio: " + precio + " | Stock: " + stock;
 	}
