@@ -37,7 +37,6 @@ public class ProductoDAO {
 			//CERRAMOS EL PREPAREDSTATEMENT
 			miPreparedStatement.close();
 			
-			conexion1.close();
 			
 		} catch (SQLException e) {
 			System.out.println("Error: " + e.getMessage());
@@ -96,11 +95,12 @@ public class ProductoDAO {
 			}
 			 miResultSet.close();
 			 miPreparedStatement.close();
-			 conexion1.close();
+			 
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return productos;
+		
 	}
 	
 	public boolean actualizarProducto(ProductoOtaku producto) {
@@ -122,7 +122,7 @@ public class ProductoDAO {
 			System.out.println("El producto se actualizo correctamente");
 			
 			miPreparedStatement.close();
-			conexion1.close();
+
 		
 			return true;
 			
@@ -143,7 +143,7 @@ public class ProductoDAO {
 			miPreparedStatement.executeUpdate();
 			
 			miPreparedStatement.close();
-			conexion1.close();
+
 			
 			System.out.println("Se ha eliminado el producto correctamente");
 			
@@ -181,7 +181,7 @@ public class ProductoDAO {
 			
 			miResultSet.close();
 			miPreparedStatement.close();
-			conexion1.close();
+
 		}catch(SQLException e) {
             System.out.println("Error al buscar productos por nombre: " + e.getMessage());
         }
@@ -212,7 +212,7 @@ public class ProductoDAO {
 			
 			miResultSet.close();
 			miPreparedStatement.close();
-			conexion1.close();
+;
 			
 		}catch(SQLException e) {
 			System.out.println("Error al buscar los productos por categoria: " + e.getMessage());

@@ -47,11 +47,50 @@ public class InterfazConsola {
 		return producto;
 	}
 	
-	public void idProducto(int id) {
-		System.out.println("")
+	public int idProducto() {
+		System.out.println("Introduce el id del producto");
+		int idBuscar = scanner.nextInt();
+		
+		return idBuscar;
+	}
+	
+	public String nombreProducto() {
+		System.out.println("Indtroduce el nombre del producto que quieres buscar");
+		String nombre = scanner.nextLine();
+		return nombre;
+	}
+	
+	public String categoriaProducto() {
+		System.out.println("Introduce la categoria del producto que quieres buscar");
+		String categoria = scanner.nextLine();
+		return categoria;
 	}
 	
 	public void mostrarInformacion() {
+		System.out.println("Mostrando la información:");
 		
+	}
+	
+	public ProductoOtaku datosProductoConId() {
+		
+		System.out.println("Escribe el id del producto");
+		int id = scanner.nextInt();
+		scanner.nextLine();
+		
+		System.out.println("Escribe el nombre del producto");
+		String nombre = scanner.nextLine();
+		
+		System.out.println("Escribe la categoria del producto");
+		String categoria = scanner.nextLine();
+		
+		System.out.println("Escribe el precio del producto");
+		double precio = scanner.nextDouble();
+		
+		System.out.println("Escribe el stock del producto");
+		int stock = scanner.nextInt();
+		
+		ProductoOtaku producto = new ProductoOtaku(id,nombre,categoria,precio,stock);
+		
+		return producto;
 	}
 }

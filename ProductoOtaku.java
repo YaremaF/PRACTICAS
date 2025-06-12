@@ -54,7 +54,7 @@ public class ProductoOtaku {
 	public void setPrecio (double precio) {
 		this.precio = precio;
 	}
-	
+
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
